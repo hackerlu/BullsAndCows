@@ -45,8 +45,6 @@ public class GamePlay extends Activity {
         try {
         BufferedReader stream =
                 new BufferedReader(new InputStreamReader(getResources().openRawResource(R.raw.words)));
-
-
             while ((line = stream.readLine()) != null) {
                 wordsString += line;
                 jsonWordsArray = new JSONArray(wordsString);
@@ -73,10 +71,7 @@ public class GamePlay extends Activity {
 
         EditText editText   = (EditText)findViewById(R.id.editText);
         String enteredWord = editText.getText().toString().trim();
-        if(this.theWord.equalsIgnoreCase(enteredWord)){
-            Intent intent = new Intent(getApplicationContext(), WinClass.class);
-            startActivity(intent);
-        }
+
         // To make the results lay out visible
         LinearLayout layoutVisibility = (LinearLayout)findViewById(R.id.gameLayout);
         if(layoutVisibility.getVisibility() != View.VISIBLE)
@@ -95,10 +90,8 @@ public class GamePlay extends Activity {
         bullCount = this.theBullCounter(first,second,wordLength);
         cowCount = this.theCowCounter(first,second,wordLength);
 
-
-
         //Getting the existing Table Layout
-        this.resultData = (TableLayout) findViewById(R.id.tableLayout);
+        this.resultData = (TableLayout) findViewById(R.id.tableLayout2);
         //Creating the object for the new Row
         TableRow resultRow = new TableRow(this);
         //Setting the number of Tries in the row
@@ -112,15 +105,15 @@ public class GamePlay extends Activity {
         TextView enteredWord2 = new TextView(this);
         enteredWord2.setText(enteredWord);
         enteredWord2.setTextSize((float)25.0);
-        enteredWord2.setGravity(Gravity.CENTER);
+        enteredWord2.setGravity(Gravity.LEFT);
         resultRow.addView(enteredWord2);
 
         //Dummy blank data... for alignment.. need to look into this
-        TextView dummyValue = new TextView(this);
-        dummyValue.setText(" ");
-        dummyValue.setTextSize((float)25.0);
-        dummyValue.setGravity(Gravity.CENTER);
-        resultRow.addView(dummyValue);
+//        TextView dummyValue = new TextView(this);
+//        dummyValue.setText(" ");
+//        dummyValue.setTextSize((float)25.0);
+//        dummyValue.setGravity(Gravity.CENTER);
+//        resultRow.addView(dummyValue);
 
         //Setting the Bull Count in the row
         TextView bulls = new TextView(this);
@@ -137,15 +130,16 @@ public class GamePlay extends Activity {
         resultRow.addView(cows);
 
         //Finally Setting the Row in Table Layout fetched
-        this.resultData.addView(resultRow, new TableLayout.LayoutParams());
+        //(resultRow, 1) Helps in adding the values to the top of the Table layout... useful!!
+        this.resultData.addView(resultRow, 1);
         //Clearing Text after result is displayed
         editText.setText("", TextView.BufferType.EDITABLE);
 
-
-
-
-
-
+        //The Winning moment
+        if(this.theWord.equalsIgnoreCase(enteredWord)){
+            Intent intent = new Intent(getApplicationContext(), WinClass.class);
+            startActivity(intent);
+        }
     }
 
     private int theBullCounter(char[] first,char[] second,int wordLength){
@@ -171,5 +165,4 @@ public class GamePlay extends Activity {
         }
         return cowCounter;
     }
-
 }
