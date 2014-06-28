@@ -16,7 +16,6 @@ public class WinClass extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.win);
     }
-
     /** Called when the user clicks the Start button */
     public void reloadGame(View view) {
         // Do something in response to button
@@ -24,3 +23,4 @@ public class WinClass extends Activity{
         startActivity(intent);
     }
 }
+

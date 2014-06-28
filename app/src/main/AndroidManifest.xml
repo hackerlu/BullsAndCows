@@ -9,14 +9,19 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.surya.bullsandcows.app.BullsAndCowsActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GamePlay"/>
-        <activity android:name=".WinClass"/>
+        <activity android:name=".GamePlay"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".WinClass"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Instruction"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

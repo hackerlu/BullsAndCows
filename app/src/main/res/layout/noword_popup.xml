@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#8fe881">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/cow2"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp" />
+
+    <ImageView
+        android:layout_width="210dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/bubble1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/buttonOk2"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="No! Never heard of that word. Try another word. Dont Look at me like that!   I am just a COW!! Duh!!"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:textIsSelectable="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignEnd="@+id/imageView2"
+        android:layout_marginTop="15dp" />
+
+</RelativeLayout>

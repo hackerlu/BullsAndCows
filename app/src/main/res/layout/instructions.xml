@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/meadow">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/cow3"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/bubble1"
+        android:maxHeight="1000dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/cow2"
+        android:layout_marginBottom="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignEnd="@+id/imageView2" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView4"
+        android:src="@drawable/bubble4"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="38dp"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All you have to do is a guess a '4' letter word with all 'Unique' letters in them"
+        android:id="@+id/textView"
+        android:textSize="25dp"
+        android:textIsSelectable="true"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/imageView4"
+        android:layout_alignStart="@+id/imageView4"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:text="If a letter in your word matches with a letter in the word to be guessed, including its position, then you get ME a BULL."
+        android:id="@+id/textView2"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="And if a letter in your word matches with a letter in the word to be guessed, but is in a wrong position, then you get ME a COW"
+        android:id="@+id/textView3"
+        android:layout_alignLeft="@+id/imageView4"
+        android:layout_alignStart="@+id/imageView4"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="60dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Needless to say, 4 BULLS you WIN!"
+        android:id="@+id/textView4"
+        android:textStyle="normal|bold"
+        android:textSize="21dp"
+        android:textIsSelectable="false"
+        android:layout_below="@+id/imageView4"
+        android:layout_alignLeft="@+id/imageView4"
+        android:layout_alignStart="@+id/imageView4" />
+
+</RelativeLayout>

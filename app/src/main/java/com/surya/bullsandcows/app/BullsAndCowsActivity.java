@@ -21,4 +21,15 @@ public class BullsAndCowsActivity extends Activity {
         startActivity(intent);
     }
 
+    /** Called when the user clicks the Start button */
+    public void gotToInstructionPage(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(getApplicationContext(), Instruction.class);
+        startActivity(intent);
+    }
+
 }
+
+
+
+
