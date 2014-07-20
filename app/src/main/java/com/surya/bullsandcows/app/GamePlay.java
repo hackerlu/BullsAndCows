@@ -89,8 +89,8 @@ public class GamePlay extends Activity {
             //The Bull comparission
             String word1 = this.theWord;
             String word2 = enteredWord;
-            char[] first  = word1.toLowerCase().toCharArray();
-            char[] second = word2.toLowerCase().toCharArray();
+            char[] first  = word1.toUpperCase().toCharArray();
+            char[] second = word2.toUpperCase().toCharArray();
             int wordLength = word1.length();
 
             //Method call to get the number of Bulls and Cows
@@ -176,7 +176,7 @@ public class GamePlay extends Activity {
             return false;
         }
         HashSet<Character> m = new HashSet<Character>();
-        for(char c : word.toLowerCase().toCharArray()){
+        for(char c : word.toUpperCase().toCharArray()){
             m.add(c);
         }
         if (m.size() < 4)
@@ -186,7 +186,7 @@ public class GamePlay extends Activity {
             return false;
         }
 
-        if(!wordList.contains(word.toLowerCase())){
+        if(!wordList.contains(word.toUpperCase())){
             showPopup2(GamePlay.this);
             editText.setText("");
             return false;
